@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Serverpackcreator_learn | 我的博客</title>
+<meta name="keywords" content="">
+<meta name="description" content="ServerPackCreator 使用指南（泛用版）
+ServerPackCreator 是一款强大的自动化工具，可帮助玩家快速创建 Minecraft 整合包的服务端版本。以下内容将以步骤为导向，帮助您通过该工具创建完美的服务端整合包。
+
+1. 前置准备（环境检查清单）
+
+ Java 版本确认（运行 ServerPackCreator 需要 Java 21，但生成的服务端可能需要其他版本如 Java 17）。
+ 整合包基本信息收集：
+
+Minecraft 版本（如 1.20.1）。
+模组加载器类型（Forge/Fabric/NeoForge/Quilt）。
+加载器版本号（如 Forge 47.4.16）。
+
+
+ 客户端整合包已正常运行（确保无损坏）。
+
+
+2. 工具原理说明
+ServerPackCreator 是一款自动化工具，而非万能解决方案。以下是几点重要说明：
+
+自动扫描与排除功能：
+
+它会自动扫描并尝试排除客户端模组。
+
+
+人工校验的必要性：
+
+无法 100% 准确识别所有客户端专属模组，最终仍需人工验证和调整。
+
+
+
+
+3. 标准操作流程
+3.1 生成阶段
+
+选择整合包目录：选择包含 mods/、config/ 等文件夹的目录。
+配置服务端参数：
+
+内存分配（建议 -Xms4G -Xmx8G 起步）。
+确认 Minecraft 版本和加载器版本。
+
+
+设置额外包含目录（重要！）：
+
+scripts/（CraftTweaker 脚本）。
+kubejs/（KubeJS 数据）。
+defaultconfigs/。
+自定义数据包文件夹（如 tacz/）。
+
+
+生成服务器包。
+
+3.2 人工审查阶段（关键！）
+必须审查以下客户端专属模组，并将其删除：
+
+  
+      
+          模组类型
+          典型文件名关键词
+          处理方式
+      
+  
+  
+      
+          JEI 及其扩展
+          jei, jeresources, jeitweaker
+          删除
+      
+      
+          信息显示
+          jade, waila, theoneprobe
+          删除
+      
+      
+          地图类
+          journeymap, xaeros
+          删除
+      
+      
+          视觉优化
+          optifine, oculus, rubidium
+          删除
+      
+      
+          输入辅助
+          mousetweaks, controlling
+          删除
+      
+      
+          纯客户端功能
+          trashslot, itemscroller
+          删除
+      
+  
+
+
+注意事项：">
+<meta name="author" content="作者名">
+<link rel="canonical" href="http://localhost:1313/posts/serverpackcreator_learn/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/serverpackcreator_learn/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="我的博客 (Alt + H)">我的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Serverpackcreator_learn
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta"><span title='2026-02-07 09:22:40 +0800 +08'>February 7, 2026</span>&nbsp;·&nbsp;<span>作者名</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="serverpackcreator-使用指南泛用版">ServerPackCreator 使用指南（泛用版）<a hidden class="anchor" aria-hidden="true" href="#serverpackcreator-使用指南泛用版">#</a></h1>
+<p>ServerPackCreator 是一款强大的自动化工具，可帮助玩家快速创建 Minecraft 整合包的服务端版本。以下内容将以步骤为导向，帮助您通过该工具创建完美的服务端整合包。</p>
+<hr>
+<h2 id="1-前置准备环境检查清单">1. 前置准备（环境检查清单）<a hidden class="anchor" aria-hidden="true" href="#1-前置准备环境检查清单">#</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Java 版本确认</strong>（运行 ServerPackCreator 需要 Java 21，但生成的服务端可能需要其他版本如 Java 17）。</li>
+<li><input disabled="" type="checkbox"> <strong>整合包基本信息收集</strong>：
+<ul>
+<li>Minecraft 版本（如 1.20.1）。</li>
+<li>模组加载器类型（Forge/Fabric/NeoForge/Quilt）。</li>
+<li>加载器版本号（如 Forge 47.4.16）。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>客户端整合包已正常运行</strong>（确保无损坏）。</li>
+</ul>
+<hr>
+<h2 id="2-工具原理说明">2. 工具原理说明<a hidden class="anchor" aria-hidden="true" href="#2-工具原理说明">#</a></h2>
+<p>ServerPackCreator 是一款自动化工具，而非万能解决方案。以下是几点重要说明：</p>
+<ul>
+<li><strong>自动扫描与排除功能</strong>：
+<ul>
+<li>它会自动扫描并尝试排除客户端模组。</li>
+</ul>
+</li>
+<li><strong>人工校验的必要性</strong>：
+<ul>
+<li>无法 100% 准确识别所有客户端专属模组，最终仍需人工验证和调整。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3-标准操作流程">3. 标准操作流程<a hidden class="anchor" aria-hidden="true" href="#3-标准操作流程">#</a></h2>
+<h3 id="31-生成阶段">3.1 生成阶段<a hidden class="anchor" aria-hidden="true" href="#31-生成阶段">#</a></h3>
+<ol>
+<li><strong>选择整合包目录</strong>：选择包含 <code>mods/</code>、<code>config/</code> 等文件夹的目录。</li>
+<li><strong>配置服务端参数</strong>：
+<ul>
+<li>内存分配（建议 <code>-Xms4G -Xmx8G</code> 起步）。</li>
+<li>确认 Minecraft 版本和加载器版本。</li>
+</ul>
+</li>
+<li><strong>设置额外包含目录（重要！）</strong>：
+<ul>
+<li><code>scripts/</code>（CraftTweaker 脚本）。</li>
+<li><code>kubejs/</code>（KubeJS 数据）。</li>
+<li><code>defaultconfigs/</code>。</li>
+<li>自定义数据包文件夹（如 <code>tacz/</code>）。</li>
+</ul>
+</li>
+<li><strong>生成服务器包</strong>。</li>
+</ol>
+<h3 id="32-人工审查阶段关键">3.2 人工审查阶段（关键！）<a hidden class="anchor" aria-hidden="true" href="#32-人工审查阶段关键">#</a></h3>
+<p>必须审查以下客户端专属模组，并将其删除：</p>
+<table>
+  <thead>
+      <tr>
+          <th>模组类型</th>
+          <th>典型文件名关键词</th>
+          <th>处理方式</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>JEI 及其扩展</td>
+          <td><code>jei</code>, <code>jeresources</code>, <code>jeitweaker</code></td>
+          <td>删除</td>
+      </tr>
+      <tr>
+          <td>信息显示</td>
+          <td><code>jade</code>, <code>waila</code>, <code>theoneprobe</code></td>
+          <td>删除</td>
+      </tr>
+      <tr>
+          <td>地图类</td>
+          <td><code>journeymap</code>, <code>xaeros</code></td>
+          <td>删除</td>
+      </tr>
+      <tr>
+          <td>视觉优化</td>
+          <td><code>optifine</code>, <code>oculus</code>, <code>rubidium</code></td>
+          <td>删除</td>
+      </tr>
+      <tr>
+          <td>输入辅助</td>
+          <td><code>mousetweaks</code>, <code>controlling</code></td>
+          <td>删除</td>
+      </tr>
+      <tr>
+          <td>纯客户端功能</td>
+          <td><code>trashslot</code>, <code>itemscroller</code></td>
+          <td>删除</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p><strong>注意事项</strong>：</p>
+<ul>
+<li>某些模组如 JEI 有服务端兼容版本，例如 <code>jei-1.20.1-forge-xxx.jar</code>，应保留。</li>
+<li>删除依赖特定客户端模组的扩展模组时可能引发崩溃（如 <code>elementalcombat_jade</code> 依赖 Jade）。</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="4-故障排查速查表">4. 故障排查速查表<a hidden class="anchor" aria-hidden="true" href="#4-故障排查速查表">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>错误现象</th>
+          <th>可能原因</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Attempted to load class ... for invalid dist DEDICATED_SERVER</code></td>
+          <td>客户端模组未删除</td>
+          <td>删除对应模组</td>
+      </tr>
+      <tr>
+          <td><code>requires xxx ... Currently, xxx is not installed</code></td>
+          <td>依赖模组缺失</td>
+          <td>安装缺失模组，或删除依赖它的模组</td>
+      </tr>
+      <tr>
+          <td><code>NoClassDefFoundError: mezz/jei/...</code></td>
+          <td>JEI 扩展模组残留</td>
+          <td>删除所有 JEI 相关扩展</td>
+      </tr>
+      <tr>
+          <td><code>Initial heap size set to a larger value than the maximum heap size</code></td>
+          <td>内存参数配置错误</td>
+          <td>检查 <code>-Xms</code> 是否大于 <code>-Xmx</code></td>
+      </tr>
+      <tr>
+          <td><code>Error: Unable to access jarfile server.jar</code></td>
+          <td>下载失败</td>
+          <td>手动下载 <code>server.jar</code> 放入目录</td>
+      </tr>
+      <tr>
+          <td>启动后长时间无输出</td>
+          <td>世界生成中</td>
+          <td>等待 2-10 分钟</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="5-通用最佳实践">5. 通用最佳实践<a hidden class="anchor" aria-hidden="true" href="#5-通用最佳实践">#</a></h2>
+<h3 id="51-渐进式测试法">5.1 渐进式测试法<a hidden class="anchor" aria-hidden="true" href="#51-渐进式测试法">#</a></h3>
+<ol>
+<li>首次启动：观察崩溃日志，记录所有客户端模组错误。</li>
+<li>分批删除：每次删除一批客户端模组后重启测试。</li>
+<li>保留清单：建立该整合包的“排除模组清单”供下次使用。</li>
+</ol>
+<h3 id="52-版本兼容性检查">5.2 版本兼容性检查<a hidden class="anchor" aria-hidden="true" href="#52-版本兼容性检查">#</a></h3>
+<ul>
+<li>确认模组加载器版本（如 Forge 47.4.16）。</li>
+<li>检查 Java 版本要求（如 Minecraft 1.20.1 通常需要 Java 17）。</li>
+<li>验证模组之间的交叉依赖关系。</li>
+</ul>
+<h3 id="53-配置文件管理">5.3 配置文件管理<a hidden class="anchor" aria-hidden="true" href="#53-配置文件管理">#</a></h3>
+<ul>
+<li>保留 <code>config/</code> 和 <code>defaultconfigs/</code> 文件夹的完整性。</li>
+<li>检查 <code>server.properties</code> 是否需要预配置。</li>
+<li>确认数据包文件夹（如 <code>tacz/</code>）已正确复制。</li>
+</ul>
+<hr>
+<h2 id="6-进阶制作可复用的排除清单">6. 进阶：制作可复用的排除清单<a hidden class="anchor" aria-hidden="true" href="#6-进阶制作可复用的排除清单">#</a></h2>
+<p>在 ServerPackCreator GUI 中配置 &ldquo;Exclude Mods&rdquo; 列表：</p>
+<pre tabindex="0"><code>jei
+jeresources
+jeitweaker
+jecharacters
+jade
+journeymap
+xaeros
+optifine
+oculus
+rubidium
+mousetweaks
+controlling
+trashslot
+appleskin
+torohealth
+</code></pre><hr>
+<h2 id="7-重要提醒">7. 重要提醒<a hidden class="anchor" aria-hidden="true" href="#7-重要提醒">#</a></h2>
+<blockquote>
+<p>⚠️ <strong>ServerPackCreator 不是万能的</strong></p>
+<p>它只能处理约 70-80% 的客户端模组识别，剩余的 20-30% 需要：</p>
+<ol>
+<li>根据崩溃日志人工判断。</li>
+<li>了解各模组的功能定位。</li>
+<li>多次迭代测试。</li>
+</ol>
+<p><strong>建议</strong>：首次处理某整合包时，预留 30-60 分钟的调试时间。</p>
+</blockquote>
+<hr>
+<h2 id="案例学习勇者之章3">案例学习：勇者之章3<a hidden class="anchor" aria-hidden="true" href="#案例学习勇者之章3">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>根本原因</th>
+          <th>泛化教训</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>forgeautofish 崩溃</td>
+          <td>纯客户端模组未过滤</td>
+          <td>自动钓鱼类模组必删</td>
+      </tr>
+      <tr>
+          <td>jecharacters 崩溃</td>
+          <td>JEI 拼音搜索，纯客户端</td>
+          <td>所有 JEI 扩展都要检查</td>
+      </tr>
+      <tr>
+          <td>elementalcombat_jade 崩溃</td>
+          <td>依赖 Jade 的扩展</td>
+          <td>删除主模组后须清理其扩展</td>
+      </tr>
+      <tr>
+          <td>JeiTweaker 崩溃</td>
+          <td>CraftTweaker 的 JEI 扩展</td>
+          <td>CT 扩展模组需单独检查</td>
+      </tr>
+      <tr>
+          <td>tacz/ 文件夹丢失</td>
+          <td>TACZ 枪包数据未保留</td>
+          <td>自定义资源文件需保留</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">我的博客</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

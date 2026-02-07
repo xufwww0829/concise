@@ -6,74 +6,20 @@
     <description>Recent content in Posts on 我的博客</description>
     <generator>Hugo -- 0.155.2</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 07 Feb 2026 08:45:15 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Feb 2026 09:26:34 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello</title>
-      <link>http://localhost:1313/posts/hello/</link>
-      <pubDate>Sat, 07 Feb 2026 08:45:15 +0800</pubDate>
-      <guid>http://localhost:1313/posts/hello/</guid>
+      <title>Hugo_blog_stu</title>
+      <link>http://localhost:1313/posts/hugo_blog_stu/</link>
+      <pubDate>Sat, 07 Feb 2026 09:26:34 +0800</pubDate>
+      <guid>http://localhost:1313/posts/hugo_blog_stu/</guid>
       <description></description>
     </item>
     <item>
-      <title></title>
-      <link>http://localhost:1313/posts/deploy_hugo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/deploy_hugo/</guid>
-      <description>&lt;h1 id=&#34;hugo-网站部署指南&#34;&gt;Hugo 网站部署指南&lt;/h1&gt;
-&lt;p&gt;Hugo 是一个快速、灵活的静态网站生成器，适合部署在各种平台上。从本地开发到上线，部署 Hugo 网站可以选择多种方式，具体步骤如下：&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;前置条件&#34;&gt;前置条件&lt;/h2&gt;
-&lt;p&gt;在部署前，请确保已完成以下准备工作：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Hugo 安装&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;请参考 &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34;&gt;Hugo 官方文档&lt;/a&gt; 安装 Hugo，确保您的版本支持当前项目。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;完成本地开发&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;所有文章已完成，并存储在 &lt;code&gt;content&lt;/code&gt; 文件夹中。&lt;/li&gt;
-&lt;li&gt;本地预览无误（使用 &lt;code&gt;hugo server&lt;/code&gt; 进行预览）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;版本控制&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用 Git 或其他版本控制工具管理项目。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;选择部署平台&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;部署 Hugo 静态网站的常见平台包括 GitHub Pages、Vercel、Netlify 等，请根据需要选择。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;部署流程&#34;&gt;部署流程&lt;/h2&gt;
-&lt;h3 id=&#34;1-使用-git-管理代码&#34;&gt;1. 使用 Git 管理代码&lt;/h3&gt;
-&lt;p&gt;在本地代码目录下初始化 Git 仓库，并确保代码已上传至远程：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 初始化 Git 仓库&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; git init 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 添加所有文件并提交&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; git add . 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Initial commit&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 关联远程仓库&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; git remote add origin &amp;lt;你的远程仓库地址&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; git push -u origin main
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-生成静态文件&#34;&gt;2. 生成静态文件&lt;/h3&gt;
-&lt;p&gt;运行以下命令生成 Hugo 项目静态文件：&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/serverpackcreator_guide/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/serverpackcreator_guide/</guid>
+      <title>Serverpackcreator_learn</title>
+      <link>http://localhost:1313/posts/serverpackcreator_learn/</link>
+      <pubDate>Sat, 07 Feb 2026 09:22:40 +0800</pubDate>
+      <guid>http://localhost:1313/posts/serverpackcreator_learn/</guid>
       <description>&lt;h1 id=&#34;serverpackcreator-使用指南泛用版&#34;&gt;ServerPackCreator 使用指南（泛用版）&lt;/h1&gt;
 &lt;p&gt;ServerPackCreator 是一款强大的自动化工具，可帮助玩家快速创建 Minecraft 整合包的服务端版本。以下内容将以步骤为导向，帮助您通过该工具创建完美的服务端整合包。&lt;/p&gt;
 &lt;hr&gt;
@@ -170,6 +116,13 @@
 &lt;/table&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;注意事项&lt;/strong&gt;：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello</title>
+      <link>http://localhost:1313/posts/hello/</link>
+      <pubDate>Sat, 07 Feb 2026 08:45:15 +0800</pubDate>
+      <guid>http://localhost:1313/posts/hello/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

@@ -6,20 +6,13 @@
     <description>Recent content on 我的博客</description>
     <generator>Hugo -- 0.155.2</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 07 Feb 2026 08:45:15 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Feb 2026 09:26:34 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello</title>
-      <link>http://localhost:1313/posts/hello/</link>
-      <pubDate>Sat, 07 Feb 2026 08:45:15 +0800</pubDate>
-      <guid>http://localhost:1313/posts/hello/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/deploy_hugo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/deploy_hugo/</guid>
+      <title>Hugo_blog_stu</title>
+      <link>http://localhost:1313/posts/hugo_blog_stu/</link>
+      <pubDate>Sat, 07 Feb 2026 09:26:34 +0800</pubDate>
+      <guid>http://localhost:1313/posts/hugo_blog_stu/</guid>
       <description>&lt;h1 id=&#34;hugo-网站部署指南&#34;&gt;Hugo 网站部署指南&lt;/h1&gt;
 &lt;p&gt;Hugo 是一个快速、灵活的静态网站生成器，适合部署在各种平台上。从本地开发到上线，部署 Hugo 网站可以选择多种方式，具体步骤如下：&lt;/p&gt;
 &lt;hr&gt;
@@ -70,10 +63,10 @@
 &lt;p&gt;运行以下命令生成 Hugo 项目静态文件：&lt;/p&gt;</description>
     </item>
     <item>
-      <title></title>
-      <link>http://localhost:1313/posts/serverpackcreator_guide/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/serverpackcreator_guide/</guid>
+      <title>Serverpackcreator_learn</title>
+      <link>http://localhost:1313/posts/serverpackcreator_learn/</link>
+      <pubDate>Sat, 07 Feb 2026 09:22:40 +0800</pubDate>
+      <guid>http://localhost:1313/posts/serverpackcreator_learn/</guid>
       <description>&lt;h1 id=&#34;serverpackcreator-使用指南泛用版&#34;&gt;ServerPackCreator 使用指南（泛用版）&lt;/h1&gt;
 &lt;p&gt;ServerPackCreator 是一款强大的自动化工具，可帮助玩家快速创建 Minecraft 整合包的服务端版本。以下内容将以步骤为导向，帮助您通过该工具创建完美的服务端整合包。&lt;/p&gt;
 &lt;hr&gt;
@@ -170,6 +163,13 @@
 &lt;/table&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;注意事项&lt;/strong&gt;：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello</title>
+      <link>http://localhost:1313/posts/hello/</link>
+      <pubDate>Sat, 07 Feb 2026 08:45:15 +0800</pubDate>
+      <guid>http://localhost:1313/posts/hello/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
