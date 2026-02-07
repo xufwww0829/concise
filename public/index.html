@@ -125,6 +125,42 @@
   <footer class="entry-footer"><span title='2026-02-07 08:45:15 +0800 +08'>February 7, 2026</span>&nbsp;·&nbsp;<span>作者名</span></footer>
   <a class="entry-link" aria-label="post link to Hello" href="http://localhost:1313/posts/hello/"></a>
 </article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Hugo 网站部署指南 Hugo 是一个快速、灵活的静态网站生成器，适合部署在各种平台上。从本地开发到上线，部署 Hugo 网站可以选择多种方式，具体步骤如下：
+前置条件 在部署前，请确保已完成以下准备工作：
+Hugo 安装：
+请参考 Hugo 官方文档 安装 Hugo，确保您的版本支持当前项目。 完成本地开发：
+所有文章已完成，并存储在 content 文件夹中。 本地预览无误（使用 hugo server 进行预览）。 版本控制：
+使用 Git 或其他版本控制工具管理项目。 选择部署平台：
+部署 Hugo 静态网站的常见平台包括 GitHub Pages、Vercel、Netlify 等，请根据需要选择。 部署流程 1. 使用 Git 管理代码 在本地代码目录下初始化 Git 仓库，并确保代码已上传至远程：
+# 初始化 Git 仓库 git init # 添加所有文件并提交 git add . git commit -m &#34;Initial commit&#34; # 关联远程仓库 git remote add origin &lt;你的远程仓库地址&gt; git push -u origin main 2. 生成静态文件 运行以下命令生成 Hugo 项目静态文件：
+...</p>
+  </div>
+  <footer class="entry-footer"><span>作者名</span></footer>
+  <a class="entry-link" aria-label="post link to " href="http://localhost:1313/posts/deploy_hugo/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>ServerPackCreator 使用指南（泛用版） ServerPackCreator 是一款强大的自动化工具，可帮助玩家快速创建 Minecraft 整合包的服务端版本。以下内容将以步骤为导向，帮助您通过该工具创建完美的服务端整合包。
+1. 前置准备（环境检查清单） Java 版本确认（运行 ServerPackCreator 需要 Java 21，但生成的服务端可能需要其他版本如 Java 17）。 整合包基本信息收集： Minecraft 版本（如 1.20.1）。 模组加载器类型（Forge/Fabric/NeoForge/Quilt）。 加载器版本号（如 Forge 47.4.16）。 客户端整合包已正常运行（确保无损坏）。 2. 工具原理说明 ServerPackCreator 是一款自动化工具，而非万能解决方案。以下是几点重要说明：
+自动扫描与排除功能： 它会自动扫描并尝试排除客户端模组。 人工校验的必要性： 无法 100% 准确识别所有客户端专属模组，最终仍需人工验证和调整。 3. 标准操作流程 3.1 生成阶段 选择整合包目录：选择包含 mods/、config/ 等文件夹的目录。 配置服务端参数： 内存分配（建议 -Xms4G -Xmx8G 起步）。 确认 Minecraft 版本和加载器版本。 设置额外包含目录（重要！）： scripts/（CraftTweaker 脚本）。 kubejs/（KubeJS 数据）。 defaultconfigs/。 自定义数据包文件夹（如 tacz/）。 生成服务器包。 3.2 人工审查阶段（关键！） 必须审查以下客户端专属模组，并将其删除：
+模组类型 典型文件名关键词 处理方式 JEI 及其扩展 jei, jeresources, jeitweaker 删除 信息显示 jade, waila, theoneprobe 删除 地图类 journeymap, xaeros 删除 视觉优化 optifine, oculus, rubidium 删除 输入辅助 mousetweaks, controlling 删除 纯客户端功能 trashslot, itemscroller 删除 注意事项：
+...</p>
+  </div>
+  <footer class="entry-footer"><span>作者名</span></footer>
+  <a class="entry-link" aria-label="post link to " href="http://localhost:1313/posts/serverpackcreator_guide/"></a>
+</article>
     </main>
     
 <footer class="footer">

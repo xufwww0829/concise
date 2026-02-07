@@ -15,5 +15,161 @@
       <guid>http://localhost:1313/posts/hello/</guid>
       <description></description>
     </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/deploy_hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/deploy_hugo/</guid>
+      <description>&lt;h1 id=&#34;hugo-网站部署指南&#34;&gt;Hugo 网站部署指南&lt;/h1&gt;
+&lt;p&gt;Hugo 是一个快速、灵活的静态网站生成器，适合部署在各种平台上。从本地开发到上线，部署 Hugo 网站可以选择多种方式，具体步骤如下：&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;前置条件&#34;&gt;前置条件&lt;/h2&gt;
+&lt;p&gt;在部署前，请确保已完成以下准备工作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Hugo 安装&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;请参考 &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34;&gt;Hugo 官方文档&lt;/a&gt; 安装 Hugo，确保您的版本支持当前项目。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;完成本地开发&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所有文章已完成，并存储在 &lt;code&gt;content&lt;/code&gt; 文件夹中。&lt;/li&gt;
+&lt;li&gt;本地预览无误（使用 &lt;code&gt;hugo server&lt;/code&gt; 进行预览）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;版本控制&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 Git 或其他版本控制工具管理项目。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;选择部署平台&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;部署 Hugo 静态网站的常见平台包括 GitHub Pages、Vercel、Netlify 等，请根据需要选择。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;部署流程&#34;&gt;部署流程&lt;/h2&gt;
+&lt;h3 id=&#34;1-使用-git-管理代码&#34;&gt;1. 使用 Git 管理代码&lt;/h3&gt;
+&lt;p&gt;在本地代码目录下初始化 Git 仓库，并确保代码已上传至远程：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 初始化 Git 仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; git init 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 添加所有文件并提交&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; git add . 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Initial commit&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 关联远程仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; git remote add origin &amp;lt;你的远程仓库地址&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; git push -u origin main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-生成静态文件&#34;&gt;2. 生成静态文件&lt;/h3&gt;
+&lt;p&gt;运行以下命令生成 Hugo 项目静态文件：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/serverpackcreator_guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/serverpackcreator_guide/</guid>
+      <description>&lt;h1 id=&#34;serverpackcreator-使用指南泛用版&#34;&gt;ServerPackCreator 使用指南（泛用版）&lt;/h1&gt;
+&lt;p&gt;ServerPackCreator 是一款强大的自动化工具，可帮助玩家快速创建 Minecraft 整合包的服务端版本。以下内容将以步骤为导向，帮助您通过该工具创建完美的服务端整合包。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-前置准备环境检查清单&#34;&gt;1. 前置准备（环境检查清单）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Java 版本确认&lt;/strong&gt;（运行 ServerPackCreator 需要 Java 21，但生成的服务端可能需要其他版本如 Java 17）。&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;整合包基本信息收集&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;Minecraft 版本（如 1.20.1）。&lt;/li&gt;
+&lt;li&gt;模组加载器类型（Forge/Fabric/NeoForge/Quilt）。&lt;/li&gt;
+&lt;li&gt;加载器版本号（如 Forge 47.4.16）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;客户端整合包已正常运行&lt;/strong&gt;（确保无损坏）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-工具原理说明&#34;&gt;2. 工具原理说明&lt;/h2&gt;
+&lt;p&gt;ServerPackCreator 是一款自动化工具，而非万能解决方案。以下是几点重要说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;自动扫描与排除功能&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;它会自动扫描并尝试排除客户端模组。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;人工校验的必要性&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;无法 100% 准确识别所有客户端专属模组，最终仍需人工验证和调整。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-标准操作流程&#34;&gt;3. 标准操作流程&lt;/h2&gt;
+&lt;h3 id=&#34;31-生成阶段&#34;&gt;3.1 生成阶段&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;选择整合包目录&lt;/strong&gt;：选择包含 &lt;code&gt;mods/&lt;/code&gt;、&lt;code&gt;config/&lt;/code&gt; 等文件夹的目录。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置服务端参数&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;内存分配（建议 &lt;code&gt;-Xms4G -Xmx8G&lt;/code&gt; 起步）。&lt;/li&gt;
+&lt;li&gt;确认 Minecraft 版本和加载器版本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;设置额外包含目录（重要！）&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;scripts/&lt;/code&gt;（CraftTweaker 脚本）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kubejs/&lt;/code&gt;（KubeJS 数据）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;defaultconfigs/&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;自定义数据包文件夹（如 &lt;code&gt;tacz/&lt;/code&gt;）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;生成服务器包&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;32-人工审查阶段关键&#34;&gt;3.2 人工审查阶段（关键！）&lt;/h3&gt;
+&lt;p&gt;必须审查以下客户端专属模组，并将其删除：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;模组类型&lt;/th&gt;
+          &lt;th&gt;典型文件名关键词&lt;/th&gt;
+          &lt;th&gt;处理方式&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;JEI 及其扩展&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;jei&lt;/code&gt;, &lt;code&gt;jeresources&lt;/code&gt;, &lt;code&gt;jeitweaker&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;删除&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;信息显示&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;jade&lt;/code&gt;, &lt;code&gt;waila&lt;/code&gt;, &lt;code&gt;theoneprobe&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;删除&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;地图类&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;journeymap&lt;/code&gt;, &lt;code&gt;xaeros&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;删除&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;视觉优化&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;optifine&lt;/code&gt;, &lt;code&gt;oculus&lt;/code&gt;, &lt;code&gt;rubidium&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;删除&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;输入辅助&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;mousetweaks&lt;/code&gt;, &lt;code&gt;controlling&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;删除&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;纯客户端功能&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;trashslot&lt;/code&gt;, &lt;code&gt;itemscroller&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;删除&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意事项&lt;/strong&gt;：&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
