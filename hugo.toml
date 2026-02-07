@@ -1,0 +1,8 @@
+theme = "PaperMod"
+baseURL = 'https://yourusername.github.io'
+languageCode = 'zh-CN'
+title = '我的博客'
+
+[params]
+  author = '作者名'
+  description = '个人技术博客'
