@@ -1,5 +1,5 @@
 theme = "PaperMod"
-baseURL = 'https://yourusername.github.io'
+baseURL = 'https://yourusername.github.io/your-repo-name'
 languageCode = 'zh-CN'
 title = '我的博客'
 
